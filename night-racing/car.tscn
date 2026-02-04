@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://b6s8dnq8af5h3" path="res://car.gd" id="1_7822p"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_24jkt"]
-bounce = 0.1
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_7822p"]
 radius = 0.2
@@ -228,7 +227,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.20175463, 0)
 shape = SubResource("SphereShape3D_7822p")
 
 [node name="CarModel" type="Node3D" parent="." unique_id=1954569352]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.009201646)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.20368278, 0.009)
 
 [node name="sedan-sports" type="Node3D" parent="CarModel" unique_id=569194920]
 
@@ -256,5 +255,5 @@ mesh = SubResource("ArrayMesh_ibua0")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.3, 0.65999997)
 mesh = SubResource("ArrayMesh_fdrnl")
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1579159590]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 1.3901615, -3.1637552)
+[node name="Camera3D" type="Camera3D" parent="CarModel" unique_id=1579159590]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 1.3901615, -3.172957)

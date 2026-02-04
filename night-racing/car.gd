@@ -16,7 +16,7 @@ var body_tilt = 30
 var speed_input = 0
 var rotate_input = 0
 
-func _physics_process(_delta):
+func _physics_process(delta) -> void:
 	car_model.transform.origin = ball.transform.origin
 	ball.apply_central_force(-car_model.global_transform.basis.z * speed_input)
 	
