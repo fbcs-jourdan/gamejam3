@@ -2,7 +2,9 @@ extends RigidBody3D
 
 @export var wheels: Array[RaycastWheel]
 @export var acceleration := 600.0
+@export var deceleration := 200.0
 @export var max_speed := 20.0
+@export var accel_curve : Curve
 
 var motor_input := 0
 
@@ -19,6 +21,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _physics_process(delta: float) -> void:
 	for wheel in wheels:
+		wheel.force_raycast_update()
 		_do_single_wheel_suspension(wheel)
 		_do_single_wheel_acceleration(wheel)
 		
@@ -32,16 +35,20 @@ func _do_single_wheel_acceleration(ray: RaycastWheel) -> void:
 	# wheel_surface = 2 * pi * r
 	ray.wheel.rotate_x(-vel * get_physics_process_delta_time() * 2  * PI * ray.wheel_radius)
 		
-	if ray.is_colliding() and ray.is_motor and motor_input:	
+	if ray.is_colliding() and ray.is_motor:	
+		var speed_ratio := vel / max_speed
+		var ac = accel_curve.sample_baked(speed_ratio)
 		var contact := ray.wheel.global_position
 		var force_vector := forward_dir * acceleration * motor_input
 		var force_pos := contact - global_position
 		
-		if vel > max_speed:
-			
+		if abs(vel) > max_speed:
 			force_vector = force_vector * 0.1
-			
-		apply_force(force_vector, force_pos)
+		if motor_input:
+			apply_force(force_vector, force_pos)
+		elif abs(vel) > 0.05:
+			force_vector = global_basis.z * deceleration * signf(vel)
+			apply_force(force_vector, force_pos)
 
 func _do_single_wheel_suspension(ray: RaycastWheel) -> void:
 	if ray.is_colliding():
