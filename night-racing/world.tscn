@@ -75,7 +75,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.51984537, 0)
 mass = 50.0
 script = ExtResource("2_fj7yv")
 wheels = [NodePath("WheelFL"), NodePath("WheelRL"), NodePath("WheelFR"), NodePath("WheelRR")]
-acceleration = 150.0
+acceleration = 800.0
 accel_curve = SubResource("Curve_tlwt5")
 
 [node name="CarMesh" type="MeshInstance3D" parent="Car" unique_id=1675081391]
@@ -147,4 +147,4 @@ mesh = SubResource("CylinderMesh_fj7yv")
 surface_material_override/0 = SubResource("StandardMaterial3D_036b0")
 
 [node name="Camera3D" type="Camera3D" parent="Car" unique_id=1237257068]
-transform = Transform3D(-0.009250076, 0, 0.9999572, 0, 1, 0, -0.9999572, 0, -0.009250076, 4.516428, 0.7449503, 0)
+transform = Transform3D(1, 0, 0, 0, 0.9717513, 0.23600718, 0, -0.23600718, 0.9717513, 0, 3.0642366, 5.2208447)

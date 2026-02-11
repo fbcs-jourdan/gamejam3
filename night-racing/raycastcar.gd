@@ -8,9 +8,18 @@ extends RigidBody3D
 @export var tire_turn_speed := 2.0
 @export var tire_max_turn_degrees := 25
 
+@export var skid_marks: Array[GPUParticles3D]
+
 var motor_input := 0
+var hand_brake := false
+var is_slipping := false
 
 func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("handbrake"):
+		hand_brake = true
+		is_slipping = true
+	elif event.is_action_released("handbrake"):
+		hand_brake = false
 	if event.is_action_pressed("accelerate"):
 		motor_input = 1
 	elif event.is_action_released("accelerate"):
@@ -36,27 +45,51 @@ func _basic_steering_rotation(delta: float) -> void:
 	
 func _physics_process(delta: float) -> void:
 	_basic_steering_rotation(delta)
+	var id := 0
 	for wheel in wheels:
 		wheel.force_raycast_update()
 		_do_single_wheel_suspension(wheel)
 		_do_single_wheel_acceleration(wheel)
-		_do_single_wheel_traction(wheel)
+		_do_single_wheel_traction(wheel, id)
+		id += 1
 		
 func _get_point_velocity(point: Vector3) -> Vector3:
 	return linear_velocity + angular_velocity.cross(point - global_position)
 	
-func _do_single_wheel_traction(ray: RaycastWheel) -> void:
+func _do_single_wheel_traction(ray: RaycastWheel, idx: int) -> void:
 	if not ray.is_colliding(): return
 	
 	var steer_side_dir := ray.global_basis.x
 	var tire_vel := _get_point_velocity(ray.wheel.global_position)
 	var steering_x_vel := steer_side_dir.dot(tire_vel)
-	var x_traction := 1.0
+	
+	var grip_factor := absf(steering_x_vel/tire_vel.length())
+	var x_traction := ray.grip_curve.sample_baked(grip_factor)
+	
+	skid_marks[idx].global_position = ray.get_collision_point() + Vector3.UP * 0.01
+	skid_marks[idx].look_at(skid_marks[idx].global_position + global_basis.z)
+	
+	if not hand_brake and grip_factor < 0.2:
+		is_slipping = false
+		skid_marks[idx].emitting = false
+	
+	if hand_brake:
+		x_traction = 0.01
+		if not skid_marks[idx].emitting:
+			skid_marks[idx].emitting = true
+	elif is_slipping:
+		x_traction = 0.1
+	
 	var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 	var x_force := -steer_side_dir * steering_x_vel * x_traction * ((mass*gravity)/4.0)
 	
+	var f_vel := -ray.global_basis.z.dot(tire_vel)
+	var z_traction := 0.05
+	var z_force := global_basis.z * f_vel * z_traction * ((mass*gravity)/4.0)
+	
 	var force_pos := ray.wheel.global_position - global_position
 	apply_force(x_force, force_pos)
+	apply_force(z_force, force_pos)
 	
 func _do_single_wheel_acceleration(ray: RaycastWheel) -> void:
 	var forward_dir := -ray.global_basis.z
