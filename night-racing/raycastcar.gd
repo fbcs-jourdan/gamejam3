@@ -22,11 +22,15 @@ func _unhandled_input(event: InputEvent) -> void:
 		hand_brake = false
 	if event.is_action_pressed("accelerate"):
 		motor_input = 1
+		print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+		#Cam.change_zoom()
+		#print(Cam.accel_zoom)
 	elif event.is_action_released("accelerate"):
 		motor_input = 0
 		
 	if event.is_action_pressed("brake"):
 		motor_input = -1
+		
 	elif event.is_action_released("brake"):
 		motor_input = 0
 		
@@ -52,6 +56,8 @@ func _physics_process(delta: float) -> void:
 		_do_single_wheel_acceleration(wheel)
 		_do_single_wheel_traction(wheel, id)
 		id += 1
+	#Cam.change_zoom()
+	#print(Cam.accel_zoom)
 		
 func _get_point_velocity(point: Vector3) -> Vector3:
 	return linear_velocity + angular_velocity.cross(point - global_position)

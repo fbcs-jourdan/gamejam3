@@ -1,27 +1,8 @@
-[gd_scene format=3 uid="uid://b1777xc46nyo3"]
+[gd_scene format=3 uid="uid://bwmuxsf1i0otx"]
 
-[ext_resource type="Texture2D" uid="uid://c3d18c0dhkxpj" path="res://icon.svg" id="1_a202f"]
-[ext_resource type="Script" uid="uid://c8qb7ltk2ullt" path="res://raycastcar.gd" id="2_a0tk4"]
-[ext_resource type="Script" uid="uid://bkjiibcyvbsub" path="res://raycast_wheels.gd" id="3_r3fl7"]
-[ext_resource type="PackedScene" uid="uid://dpp8j2idlh8ue" path="res://sedan-sports.glb" id="4_r3fl7"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_a0tk4"]
-sky_top_color = Color(0.40029314, 0.41218975, 0.39441738, 1)
-sky_horizon_color = Color(1.0348678, 1.0221086, 1.0038987, 1)
-ground_bottom_color = Color(0.59, 0.52706665, 0.47199997, 1)
-ground_horizon_color = Color(1.0348678, 1.0221086, 1.0038987, 1)
-
-[sub_resource type="Sky" id="Sky_r3fl7"]
-sky_material = SubResource("ProceduralSkyMaterial_a0tk4")
-
-[sub_resource type="Environment" id="Environment_jka67"]
-background_mode = 2
-sky = SubResource("Sky_r3fl7")
-tonemap_mode = 2
-glow_enabled = true
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_noarx"]
-albedo_texture = ExtResource("1_a202f")
+[ext_resource type="Script" uid="uid://c8qb7ltk2ullt" path="res://raycastcar.gd" id="1_k61xc"]
+[ext_resource type="Script" uid="uid://bkjiibcyvbsub" path="res://raycast_wheels.gd" id="2_06lh1"]
+[ext_resource type="PackedScene" uid="uid://dpp8j2idlh8ue" path="res://sedan-sports.glb" id="3_td361"]
 
 [sub_resource type="Curve" id="Curve_a0tk4"]
 _data = [Vector2(0, 0.3), 0.0, 0.0, 0, 0, Vector2(0.3, 0.90000004), 0.0, 0.0, 0, 0, Vector2(0.6, 0.8), 0.0, 0.0, 0, 0, Vector2(1, 0.1), 0.0, 0.0, 0, 0]
@@ -75,111 +56,94 @@ vertex_color_use_as_albedo = true
 material = SubResource("StandardMaterial3D_i5arm")
 orientation = 1
 
-[node name="Node3D" type="Node3D" unique_id=592978772]
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1591141493]
-environment = SubResource("Environment_jka67")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2007929400]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
-light_color = Color(0.6457067, 0.53889245, 0.26463518, 1)
-shadow_enabled = true
-
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=599300601]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, -224.0874)
-use_collision = true
-size = Vector3(100, 1, 548.1748)
-material = SubResource("StandardMaterial3D_noarx")
-
-[node name="Car" type="RigidBody3D" parent="." unique_id=1645376756 node_paths=PackedStringArray("wheels", "skid_marks")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.51984537, 0)
+[node name="Car" type="RigidBody3D" unique_id=161624053 node_paths=PackedStringArray("wheels", "skid_marks")]
 mass = 50.0
-script = ExtResource("2_a0tk4")
+script = ExtResource("1_k61xc")
 wheels = [NodePath("WheelFL"), NodePath("WheelRL"), NodePath("WheelFR"), NodePath("WheelRR")]
 acceleration = 800.0
 accel_curve = SubResource("Curve_a0tk4")
 skid_marks = [NodePath("SkidMarks/GPUParticles3D"), NodePath("SkidMarks/GPUParticles3D2"), NodePath("SkidMarks/GPUParticles3D3"), NodePath("SkidMarks/GPUParticles3D4")]
 
-[node name="CarMesh" type="MeshInstance3D" parent="Car" unique_id=829241025]
+[node name="CarMesh" type="MeshInstance3D" parent="." unique_id=1455150668]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 visible = false
 mesh = SubResource("BoxMesh_r3fl7")
 surface_material_override/0 = SubResource("StandardMaterial3D_jka67")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Car/CarMesh" unique_id=657886047]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CarMesh" unique_id=759596497]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.29830098, 1.0723631)
 mesh = SubResource("BoxMesh_i5arm")
 surface_material_override/0 = SubResource("StandardMaterial3D_wc5p8")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Car" unique_id=2064589820]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=794871449]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 shape = SubResource("BoxShape3D_jsk3o")
 
-[node name="WheelFL" type="RayCast3D" parent="Car" unique_id=1700809565]
+[node name="WheelFL" type="RayCast3D" parent="." unique_id=1807722692]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1, 0.523, -1.3)
 visible = false
 enabled = false
-script = ExtResource("3_r3fl7")
+script = ExtResource("2_06lh1")
 spring_strength = 8000.0
 spring_damping = 120.0
 over_extend = 0.2
 grip_curve = SubResource("Curve_r3fl7")
 
-[node name="Wheel" type="MeshInstance3D" parent="Car/WheelFL" unique_id=1395176069]
+[node name="Wheel" type="MeshInstance3D" parent="WheelFL" unique_id=1665831220]
 transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("CylinderMesh_4arys")
 surface_material_override/0 = SubResource("StandardMaterial3D_6iypd")
 
-[node name="WheelRL" type="RayCast3D" parent="Car" unique_id=1723664516]
+[node name="WheelRL" type="RayCast3D" parent="." unique_id=1970885869]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1, 0.523, 1.3)
 visible = false
 enabled = false
-script = ExtResource("3_r3fl7")
+script = ExtResource("2_06lh1")
 spring_strength = 8000.0
 spring_damping = 120.0
 over_extend = 0.2
 is_motor = true
 grip_curve = SubResource("Curve_r3fl7")
 
-[node name="Wheel" type="MeshInstance3D" parent="Car/WheelRL" unique_id=1126145138]
+[node name="Wheel" type="MeshInstance3D" parent="WheelRL" unique_id=1029932873]
 transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("CylinderMesh_4arys")
 surface_material_override/0 = SubResource("StandardMaterial3D_6iypd")
 
-[node name="WheelFR" type="RayCast3D" parent="Car" unique_id=433685216]
+[node name="WheelFR" type="RayCast3D" parent="." unique_id=2056871077]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1, 0.523, -1.3)
 visible = false
 enabled = false
-script = ExtResource("3_r3fl7")
+script = ExtResource("2_06lh1")
 spring_strength = 8000.0
 spring_damping = 120.0
 over_extend = 0.2
 grip_curve = SubResource("Curve_r3fl7")
 
-[node name="Wheel" type="MeshInstance3D" parent="Car/WheelFR" unique_id=2111439583]
+[node name="Wheel" type="MeshInstance3D" parent="WheelFR" unique_id=788781541]
 transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("CylinderMesh_4arys")
 surface_material_override/0 = SubResource("StandardMaterial3D_6iypd")
 
-[node name="WheelRR" type="RayCast3D" parent="Car" unique_id=1023810021]
+[node name="WheelRR" type="RayCast3D" parent="." unique_id=569916106]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1, 0.523, 1.3)
 visible = false
 enabled = false
-script = ExtResource("3_r3fl7")
+script = ExtResource("2_06lh1")
 spring_strength = 8000.0
 spring_damping = 120.0
 over_extend = 0.2
 is_motor = true
 grip_curve = SubResource("Curve_r3fl7")
 
-[node name="Wheel" type="MeshInstance3D" parent="Car/WheelRR" unique_id=2145616863]
+[node name="Wheel" type="MeshInstance3D" parent="WheelRR" unique_id=1942148867]
 transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("CylinderMesh_4arys")
 surface_material_override/0 = SubResource("StandardMaterial3D_6iypd")
 
-[node name="SkidMarks" type="Node3D" parent="Car" unique_id=886414300]
+[node name="SkidMarks" type="Node3D" parent="." unique_id=1339121758]
 
-[node name="GPUParticles3D" type="GPUParticles3D" parent="Car/SkidMarks" unique_id=408095602]
+[node name="GPUParticles3D" type="GPUParticles3D" parent="SkidMarks" unique_id=1256803791]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6869078, 0, 0)
 emitting = false
 amount = 150
@@ -188,7 +152,7 @@ fixed_fps = 60
 process_material = SubResource("ParticleProcessMaterial_jka67")
 draw_pass_1 = SubResource("QuadMesh_wc5p8")
 
-[node name="GPUParticles3D2" type="GPUParticles3D" parent="Car/SkidMarks" unique_id=1130825711]
+[node name="GPUParticles3D2" type="GPUParticles3D" parent="SkidMarks" unique_id=963313575]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6869078, 0, 0)
 emitting = false
 amount = 150
@@ -197,7 +161,7 @@ fixed_fps = 60
 process_material = SubResource("ParticleProcessMaterial_jka67")
 draw_pass_1 = SubResource("QuadMesh_wc5p8")
 
-[node name="GPUParticles3D3" type="GPUParticles3D" parent="Car/SkidMarks" unique_id=1927931035]
+[node name="GPUParticles3D3" type="GPUParticles3D" parent="SkidMarks" unique_id=385809466]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6869078, 0, 0)
 emitting = false
 amount = 150
@@ -206,7 +170,7 @@ fixed_fps = 60
 process_material = SubResource("ParticleProcessMaterial_jka67")
 draw_pass_1 = SubResource("QuadMesh_wc5p8")
 
-[node name="GPUParticles3D4" type="GPUParticles3D" parent="Car/SkidMarks" unique_id=581346579]
+[node name="GPUParticles3D4" type="GPUParticles3D" parent="SkidMarks" unique_id=1762802846]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6869078, 0, 0)
 emitting = false
 amount = 150
@@ -215,9 +179,5 @@ fixed_fps = 60
 process_material = SubResource("ParticleProcessMaterial_jka67")
 draw_pass_1 = SubResource("QuadMesh_wc5p8")
 
-[node name="Camera3D" type="Camera3D" parent="Car" unique_id=729103692]
-transform = Transform3D(1, 0, 0, 0, 0.8962776, 0.4434936, 0, -0.4434936, 0.8962776, 0, 2.783329, 4.0438557)
-fov = 89.6
-
-[node name="sedan-sports" parent="Car" unique_id=1573167100 instance=ExtResource("4_r3fl7")]
+[node name="sedan-sports" parent="." unique_id=1573167100 instance=ExtResource("3_td361")]
 transform = Transform3D(-1.985, 0, -1.7353422e-07, 0, 1.985, 0, 1.7353422e-07, 0, -1.985, 0, -0.51984537, 0)
