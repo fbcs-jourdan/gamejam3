@@ -16,6 +16,9 @@ func _process(delta: float) -> void:
 	elif cameras[index].fov >= 90:
 		cameras[0].fov /= 1.001
 		cameras[1].fov /= 1.001
+		if Input.is_action_pressed("brake") and cameras[index].fov >= 90:
+			cameras[0].fov /= 1.005
+			cameras[1].fov /= 1.005
 	if Input.is_action_just_pressed("cam"):
 		index = (index + 1) % cameras.size()
 		change_cam()

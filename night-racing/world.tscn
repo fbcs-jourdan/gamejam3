@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://b1777xc46nyo3"]
 
+[ext_resource type="PackedScene" uid="uid://cy2wlegete0e" path="res://kenney_city-kit-roads/Models/GLB format/road-straight.glb" id="1_aqk2v"]
 [ext_resource type="Texture2D" uid="uid://c3d18c0dhkxpj" path="res://icon.svg" id="1_tlwt5"]
 [ext_resource type="PackedScene" uid="uid://bwmuxsf1i0otx" path="res://car.tscn" id="2_tlwt5"]
 [ext_resource type="Script" uid="uid://dcqit30bb4226" path="res://cameras.gd" id="3_aqk2v"]
@@ -23,6 +24,9 @@ glow_enabled = true
 albedo_texture = ExtResource("1_tlwt5")
 
 [node name="World" type="Node3D" unique_id=592978772]
+
+[node name="road-straight2" parent="." unique_id=1283507980 instance=ExtResource("1_aqk2v")]
+transform = Transform3D(-1.7484555e-05, 0, 13, 0, 13, 0, -400, 0, -5.68248e-07, 0, 0, -172.03229)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1591141493]
 environment = SubResource("Environment_jka67")
