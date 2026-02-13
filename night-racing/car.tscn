@@ -58,6 +58,7 @@ orientation = 1
 
 [node name="Car" type="RigidBody3D" unique_id=161624053 node_paths=PackedStringArray("wheels", "skid_marks")]
 mass = 50.0
+gravity_scale = 10.0
 script = ExtResource("1_k61xc")
 wheels = [NodePath("WheelFL"), NodePath("WheelRL"), NodePath("WheelFR"), NodePath("WheelRR")]
 acceleration = 800.0

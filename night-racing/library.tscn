@@ -72,11 +72,13 @@
 [ext_resource type="PackedScene" uid="uid://dn3xwht6ikckb" path="res://kenney_city-kit-roads/Models/GLB format/tile-low.glb" id="70_520nr"]
 [ext_resource type="PackedScene" uid="uid://dyricpoq6g4sf" path="res://kenney_city-kit-roads/Models/GLB format/tile-slant.glb" id="71_51lsp"]
 [ext_resource type="PackedScene" uid="uid://caq8yi0wt1kvu" path="res://kenney_city-kit-roads/Models/GLB format/tile-slantHigh.glb" id="72_5ajv4"]
+[ext_resource type="PackedScene" uid="uid://bd4els2jxhknp" path="res://road_straight_2.tscn" id="73_ajp4c"]
+[ext_resource type="PackedScene" uid="uid://djnx6ho3tsf4c" path="res://light_curved_double_2.tscn" id="74_q6xx7"]
 
 [node name="Library" type="Node3D" unique_id=654099879]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
 
-[node name="bridge-pillar-wide2" parent="." unique_id=2056820078 instance=ExtResource("1_q3xxc")]
+[node name="bridge-pillar-wide2" parent="." unique_id=1466949673 instance=ExtResource("1_q3xxc")]
 
 [node name="bridge-pillar2" parent="." unique_id=169385630 instance=ExtResource("2_ajp4c")]
 
@@ -219,3 +221,7 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
 [node name="tile-slant2" parent="." unique_id=1322732551 instance=ExtResource("71_51lsp")]
 
 [node name="tile-slantHigh2" parent="." unique_id=777847554 instance=ExtResource("72_5ajv4")]
+
+[node name="road-straight3" parent="." unique_id=1413171405 instance=ExtResource("73_ajp4c")]
+
+[node name="light-curved-double3" parent="." unique_id=1994689835 instance=ExtResource("74_q6xx7")]
