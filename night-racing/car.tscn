@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c8qb7ltk2ullt" path="res://raycastcar.gd" id="1_k61xc"]
 [ext_resource type="Script" uid="uid://bkjiibcyvbsub" path="res://raycast_wheels.gd" id="2_06lh1"]
-[ext_resource type="PackedScene" uid="uid://dpp8j2idlh8ue" path="res://sedan-sports.glb" id="3_td361"]
+[ext_resource type="PackedScene" uid="uid://b3c474e53j7f1" path="res://sedan_sports.tscn" id="3_k61xc"]
 
 [sub_resource type="Curve" id="Curve_a0tk4"]
 _data = [Vector2(0, 0.3), 0.0, 0.0, 0, 0, Vector2(0.3, 0.90000004), 0.0, 0.0, 0, 0, Vector2(0.6, 0.8), 0.0, 0.0, 0, 0, Vector2(1, 0.1), 0.0, 0.0, 0, 0]
@@ -179,5 +179,5 @@ fixed_fps = 60
 process_material = SubResource("ParticleProcessMaterial_jka67")
 draw_pass_1 = SubResource("QuadMesh_wc5p8")
 
-[node name="sedan-sports" parent="." unique_id=1573167100 instance=ExtResource("3_td361")]
-transform = Transform3D(-1.985, 0, -1.7353422e-07, 0, 1.985, 0, 1.7353422e-07, 0, -1.985, 0, -0.51984537, 0)
+[node name="sedan-sports2" parent="." unique_id=1573167100 instance=ExtResource("3_k61xc")]
+transform = Transform3D(-1.985, 0, -1.7353422e-07, 0, 1.985, 0, 1.7353422e-07, 0, -1.985, 0, 0, 0)

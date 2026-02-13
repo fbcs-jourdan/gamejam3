@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://b3c474e53j7f1"]
+
+[ext_resource type="PackedScene" uid="uid://dpp8j2idlh8ue" path="res://sedan-sports.glb" id="1_m48y8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kakyq"]
+albedo_color = Color(0.3470683, 0.3470683, 0.3470683, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ryc11"]
+albedo_color = Color(1, 0.4506808, 0.38219368, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3s358"]
+albedo_color = Color(1, 0.41474587, 0.34608012, 1)
+
+[node name="sedan-sports" unique_id=1573167100 instance=ExtResource("1_m48y8")]
+
+[node name="wheel-back-right" parent="." index="0" unique_id=881934680]
+material_override = SubResource("StandardMaterial3D_kakyq")
+
+[node name="body" parent="." index="1" unique_id=1953193511]
+material_override = SubResource("StandardMaterial3D_ryc11")
+
+[node name="spoiler" parent="body" index="0" unique_id=1486375645]
+material_override = SubResource("StandardMaterial3D_3s358")
+
+[node name="wheel-back-left" parent="." index="2" unique_id=1544898461]
+material_override = SubResource("StandardMaterial3D_kakyq")
+
+[node name="wheel-front-left" parent="." index="3" unique_id=1387610342]
+material_override = SubResource("StandardMaterial3D_kakyq")
+
+[node name="wheel-front-right" parent="." index="4" unique_id=2083682165]
+material_override = SubResource("StandardMaterial3D_kakyq")
