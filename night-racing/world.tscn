@@ -38,7 +38,7 @@ size = Vector3(10000, 1, 10000)
 material = SubResource("StandardMaterial3D_noarx")
 
 [node name="Car" parent="." unique_id=161624053 instance=ExtResource("2_tlwt5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.51984537, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.48742574, 1.7106624, -3.8679411)
 
 [node name="Cameras" type="Node3D" parent="Car" unique_id=685899208 node_paths=PackedStringArray("cameras")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.51984537, 0)
@@ -64,5 +64,5 @@ transform = Transform3D(-6.556708e-07, 0, 15, 0, 15, 0, -15, 0, -6.556708e-07, 0
 mesh_library = ExtResource("3_tlwt5")
 cell_size = Vector3(1, 0.01, 0.2)
 data = {
-"cells": PackedInt32Array(0, 0, 64, 1, 0, 64, 2, 0, 64, 3, 0, 64, 4, 0, 64, 5, 0, 64, 6, 0, 64, 7, 0, 64, 8, 0, 64, 9, 0, 64, 10, 0, 64, 11, 0, 64, 12, 0, 64, 13, 0, 64, 14, 0, 64, 15, 0, 64, 0, 65534, 6, 1, 65534, 6, 0, 2, 6)
+"cells": PackedInt32Array(0, 0, 64, 1, 0, 64, 2, 0, 64, 3, 0, 655424, 4, 0, 64, 5, 0, 17, 6, 0, 1048597, 7, 0, 17, 8, 0, 64, 9, 0, 64, 10, 0, 64, 11, 0, 64, 12, 0, 64, 13, 0, 64, 14, 0, 64, 15, 0, 64, 0, 65534, 6, 1, 65534, 6, 0, 2, 6, 6, 5, 1441809, 6, 10, 1441856, 6, 15, 1441856, 6, 20, 1048640, 6, 65531, 1441809, 5, 65530, 655450, 3, 65530, 655441, 5, 6, 83, 3, 5, 82, 1, 5, 83, 1, 65530, 655440)
 }

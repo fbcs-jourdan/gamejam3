@@ -14,6 +14,7 @@ albedo_color = Color(1, 0.41474587, 0.34608012, 1)
 [node name="sedan-sports" unique_id=1573167100 instance=ExtResource("1_m48y8")]
 
 [node name="wheel-back-right" parent="." index="0" unique_id=881934680]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.45508772, 0.3, -0.65999997)
 material_override = SubResource("StandardMaterial3D_kakyq")
 
 [node name="body" parent="." index="1" unique_id=1953193511]
@@ -23,10 +24,13 @@ material_override = SubResource("StandardMaterial3D_ryc11")
 material_override = SubResource("StandardMaterial3D_3s358")
 
 [node name="wheel-back-left" parent="." index="2" unique_id=1544898461]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.46725446, 0.3, -0.65999997)
 material_override = SubResource("StandardMaterial3D_kakyq")
 
 [node name="wheel-front-left" parent="." index="3" unique_id=1387610342]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.46725446, 0.3, 0.65999997)
 material_override = SubResource("StandardMaterial3D_kakyq")
 
 [node name="wheel-front-right" parent="." index="4" unique_id=2083682165]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.45508772, 0.3, 0.65999997)
 material_override = SubResource("StandardMaterial3D_kakyq")

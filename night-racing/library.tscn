@@ -74,6 +74,25 @@
 [ext_resource type="PackedScene" uid="uid://caq8yi0wt1kvu" path="res://kenney_city-kit-roads/Models/GLB format/tile-slantHigh.glb" id="72_5ajv4"]
 [ext_resource type="PackedScene" uid="uid://bd4els2jxhknp" path="res://road_straight_2.tscn" id="73_ajp4c"]
 [ext_resource type="PackedScene" uid="uid://djnx6ho3tsf4c" path="res://light_curved_double_2.tscn" id="74_q6xx7"]
+[ext_resource type="PackedScene" uid="uid://crq7kcp6kto5n" path="res://Models/GLB format/building-a.glb" id="75_0xvl2"]
+[ext_resource type="PackedScene" uid="uid://djahog2m26l2h" path="res://Models/GLB format/building-b.glb" id="76_q1dla"]
+[ext_resource type="PackedScene" uid="uid://wgq5078tddog" path="res://Models/GLB format/building-c.glb" id="77_dludh"]
+[ext_resource type="PackedScene" uid="uid://be20ekuloms10" path="res://Models/GLB format/building-d.glb" id="78_rdufd"]
+[ext_resource type="PackedScene" uid="uid://dvudomlstki8q" path="res://Models/GLB format/building-e.glb" id="79_5kley"]
+[ext_resource type="PackedScene" uid="uid://dsuv4f4va07vs" path="res://Models/GLB format/building-f.glb" id="80_hukqc"]
+[ext_resource type="PackedScene" uid="uid://cuxev2kk7yao" path="res://Models/GLB format/building-g.glb" id="81_d30nm"]
+[ext_resource type="PackedScene" uid="uid://dnh3hxwwqaqhu" path="res://Models/GLB format/building-h.glb" id="82_m3oco"]
+[ext_resource type="PackedScene" uid="uid://4elht0xladfs" path="res://Models/GLB format/building-i.glb" id="83_tw4af"]
+[ext_resource type="PackedScene" uid="uid://ctkt16dd7m6ta" path="res://Models/GLB format/building-j.glb" id="84_xsnj8"]
+[ext_resource type="PackedScene" uid="uid://r6ekhyk7kq3l" path="res://Models/GLB format/building-k.glb" id="85_3ilk2"]
+[ext_resource type="PackedScene" uid="uid://dprslcwksnvyv" path="res://Models/GLB format/building-l.glb" id="86_2u15l"]
+[ext_resource type="PackedScene" uid="uid://bgeg1kho5u4qf" path="res://Models/GLB format/building-m.glb" id="87_hl34d"]
+[ext_resource type="PackedScene" uid="uid://dvhyluhnsvi3t" path="res://Models/GLB format/building-n.glb" id="88_6ttt6"]
+[ext_resource type="PackedScene" uid="uid://b0od15lg8nu7" path="res://Models/GLB format/building-skyscraper-a.glb" id="89_1h7kk"]
+[ext_resource type="PackedScene" uid="uid://vnhbyvsemlj0" path="res://Models/GLB format/building-skyscraper-b.glb" id="90_xsnyf"]
+[ext_resource type="PackedScene" uid="uid://gyonl663etmb" path="res://Models/GLB format/building-skyscraper-c.glb" id="91_pvul2"]
+[ext_resource type="PackedScene" uid="uid://bi7wqya8pt6bx" path="res://Models/GLB format/building-skyscraper-d.glb" id="92_vrvy8"]
+[ext_resource type="PackedScene" uid="uid://dhbuor8f8dobv" path="res://Models/GLB format/building-skyscraper-e.glb" id="93_fnlsh"]
 
 [node name="Library" type="Node3D" unique_id=654099879]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
@@ -225,3 +244,41 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
 [node name="road-straight3" parent="." unique_id=1413171405 instance=ExtResource("73_ajp4c")]
 
 [node name="light-curved-double3" parent="." unique_id=1994689835 instance=ExtResource("74_q6xx7")]
+
+[node name="building-a2" parent="." unique_id=1138194030 instance=ExtResource("75_0xvl2")]
+
+[node name="building-b2" parent="." unique_id=5411352 instance=ExtResource("76_q1dla")]
+
+[node name="building-c2" parent="." unique_id=532269050 instance=ExtResource("77_dludh")]
+
+[node name="building-d2" parent="." unique_id=1046093267 instance=ExtResource("78_rdufd")]
+
+[node name="building-e2" parent="." unique_id=732399249 instance=ExtResource("79_5kley")]
+
+[node name="building-f2" parent="." unique_id=1642908659 instance=ExtResource("80_hukqc")]
+
+[node name="building-g2" parent="." unique_id=1301998165 instance=ExtResource("81_d30nm")]
+
+[node name="building-h2" parent="." unique_id=1519242301 instance=ExtResource("82_m3oco")]
+
+[node name="building-i2" parent="." unique_id=606542827 instance=ExtResource("83_tw4af")]
+
+[node name="building-j2" parent="." unique_id=612123782 instance=ExtResource("84_xsnj8")]
+
+[node name="building-k2" parent="." unique_id=1475684796 instance=ExtResource("85_3ilk2")]
+
+[node name="building-l2" parent="." unique_id=1209094829 instance=ExtResource("86_2u15l")]
+
+[node name="building-m2" parent="." unique_id=1441284365 instance=ExtResource("87_hl34d")]
+
+[node name="building-n2" parent="." unique_id=846120243 instance=ExtResource("88_6ttt6")]
+
+[node name="building-skyscraper-a2" parent="." unique_id=1645650647 instance=ExtResource("89_1h7kk")]
+
+[node name="building-skyscraper-b2" parent="." unique_id=2124080712 instance=ExtResource("90_xsnyf")]
+
+[node name="building-skyscraper-c2" parent="." unique_id=909437669 instance=ExtResource("91_pvul2")]
+
+[node name="building-skyscraper-d2" parent="." unique_id=494693757 instance=ExtResource("92_vrvy8")]
+
+[node name="building-skyscraper-e2" parent="." unique_id=149345018 instance=ExtResource("93_fnlsh")]
