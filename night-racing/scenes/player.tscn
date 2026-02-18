@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://c83q7dbcfmidc"]
+
+[ext_resource type="Script" uid="uid://vyc0ggepr2om" path="res://scripts/player.gd" id="1_4flbx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sh265"]
+size = Vector3(1, 1, 2.621338)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4flbx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4flbx"]
+albedo_color = Color(1, 0.5038981, 0.43718615, 1)
+
+[node name="Player" type="VehicleBody3D" unique_id=396020169]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+script = ExtResource("1_4flbx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=660174326]
+shape = SubResource("BoxShape3D_sh265")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1675832304]
+mesh = SubResource("BoxMesh_4flbx")
+surface_material_override/0 = SubResource("StandardMaterial3D_4flbx")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=159711385]
+transform = Transform3D(1, 0, 0, 0, 0.94751763, 0.3197036, 0, -0.3197036, 0.94751763, 0, 0.94360363, 1.9546943)

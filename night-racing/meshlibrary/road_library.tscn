@@ -1,0 +1,184 @@
+[gd_scene format=3 uid="uid://b632ucq7ey23j"]
+
+[ext_resource type="PackedScene" uid="uid://htwur6o3tgu1" path="res://assets/roads/Models/GLB format/road-bend-barrier.glb" id="1_60lu8"]
+[ext_resource type="PackedScene" uid="uid://dkbxtn71l0cs3" path="res://assets/roads/Models/GLB format/road-bend-sidewalk.glb" id="2_l2udj"]
+[ext_resource type="PackedScene" uid="uid://cvs0mg5aa16ms" path="res://assets/roads/Models/GLB format/road-bend-square-barrier.glb" id="3_6jvli"]
+[ext_resource type="PackedScene" uid="uid://dbgvcpcqhtamj" path="res://assets/roads/Models/GLB format/road-bend-square.glb" id="4_3h2lm"]
+[ext_resource type="PackedScene" uid="uid://divj1axcn3gl3" path="res://assets/roads/Models/GLB format/road-bend.glb" id="5_s5deb"]
+[ext_resource type="PackedScene" uid="uid://ca1pjkplxkart" path="res://assets/roads/Models/GLB format/road-bridge.glb" id="6_j7ixs"]
+[ext_resource type="PackedScene" uid="uid://ddhu2gyx6cvlq" path="res://assets/roads/Models/GLB format/road-crossing.glb" id="7_typxt"]
+[ext_resource type="PackedScene" uid="uid://b3cun6qwgeef7" path="res://assets/roads/Models/GLB format/road-crossroad-barrier.glb" id="8_n3ev1"]
+[ext_resource type="PackedScene" uid="uid://x81djj7gx7bl" path="res://assets/roads/Models/GLB format/road-crossroad-line.glb" id="9_ytsrb"]
+[ext_resource type="PackedScene" uid="uid://cbbrvd8femidx" path="res://assets/roads/Models/GLB format/road-crossroad-path.glb" id="10_m2gnu"]
+[ext_resource type="PackedScene" uid="uid://rqs8lhrsiebq" path="res://assets/roads/Models/GLB format/road-crossroad.glb" id="11_8oaas"]
+[ext_resource type="PackedScene" uid="uid://bsly2knox5oo5" path="res://assets/roads/Models/GLB format/road-curve-barrier.glb" id="12_o3350"]
+[ext_resource type="PackedScene" uid="uid://dlb7h0ymso6e" path="res://assets/roads/Models/GLB format/road-curve-intersection-barrier.glb" id="13_mf34b"]
+[ext_resource type="PackedScene" uid="uid://dvh48n5oo5ls1" path="res://assets/roads/Models/GLB format/road-curve-intersection.glb" id="14_827gu"]
+[ext_resource type="PackedScene" uid="uid://0a64vx8168h8" path="res://assets/roads/Models/GLB format/road-curve-pavement.glb" id="15_yveaw"]
+[ext_resource type="PackedScene" uid="uid://yr4t3dnqfhwc" path="res://assets/roads/Models/GLB format/road-curve.glb" id="16_gpewy"]
+[ext_resource type="PackedScene" uid="uid://dklu86g47bpgp" path="res://assets/roads/Models/GLB format/road-driveway-double-barrier.glb" id="17_t0gkj"]
+[ext_resource type="PackedScene" uid="uid://dk83mqk5467qa" path="res://assets/roads/Models/GLB format/road-driveway-double.glb" id="18_das7c"]
+[ext_resource type="PackedScene" uid="uid://dfvm3firbwms7" path="res://assets/roads/Models/GLB format/road-driveway-single-barrier.glb" id="19_q4yay"]
+[ext_resource type="PackedScene" uid="uid://ch4ytyuf3074t" path="res://assets/roads/Models/GLB format/road-driveway-single.glb" id="20_noqi5"]
+[ext_resource type="PackedScene" uid="uid://curkhav6wu5qp" path="res://assets/roads/Models/GLB format/road-end-barrier.glb" id="21_d0p1n"]
+[ext_resource type="PackedScene" uid="uid://d0twg7genwxm3" path="res://assets/roads/Models/GLB format/road-end-round-barrier.glb" id="22_kbxyw"]
+[ext_resource type="PackedScene" uid="uid://dad7wglp742j5" path="res://assets/roads/Models/GLB format/road-end-round.glb" id="23_i7np2"]
+[ext_resource type="PackedScene" uid="uid://bha482on4ndcc" path="res://assets/roads/Models/GLB format/road-end.glb" id="24_2nqyp"]
+[ext_resource type="PackedScene" uid="uid://gfw6ojte66nt" path="res://assets/roads/Models/GLB format/road-intersection-barrier.glb" id="25_n30k5"]
+[ext_resource type="PackedScene" uid="uid://cncum6cv0g66e" path="res://assets/roads/Models/GLB format/road-intersection-line.glb" id="26_dgx53"]
+[ext_resource type="PackedScene" uid="uid://d2cdoc0ug7qul" path="res://assets/roads/Models/GLB format/road-intersection-path.glb" id="27_6okea"]
+[ext_resource type="PackedScene" uid="uid://d0f24ggnbvm6s" path="res://assets/roads/Models/GLB format/road-intersection.glb" id="28_xl7vu"]
+[ext_resource type="PackedScene" uid="uid://bdmngjbkngmla" path="res://assets/roads/Models/GLB format/road-roundabout-barrier.glb" id="29_ierjw"]
+[ext_resource type="PackedScene" uid="uid://xnh3lcgcmp8r" path="res://assets/roads/Models/GLB format/road-roundabout.glb" id="30_8gcho"]
+[ext_resource type="PackedScene" uid="uid://bdeyrj2mdacmn" path="res://assets/roads/Models/GLB format/road-side-barrier.glb" id="31_fn1it"]
+[ext_resource type="PackedScene" uid="uid://bnqjm0l8sr1tm" path="res://assets/roads/Models/GLB format/road-side-entry-barrier.glb" id="32_fsur6"]
+[ext_resource type="PackedScene" uid="uid://njshornawk6m" path="res://assets/roads/Models/GLB format/road-side-entry.glb" id="33_8dn7d"]
+[ext_resource type="PackedScene" uid="uid://du25ocgcn8h2" path="res://assets/roads/Models/GLB format/road-side-exit-barrier.glb" id="34_e0ulo"]
+[ext_resource type="PackedScene" uid="uid://dp3i7tt6gq1gm" path="res://assets/roads/Models/GLB format/road-side-exit.glb" id="35_leyuv"]
+[ext_resource type="PackedScene" uid="uid://1mgpenknmw5r" path="res://assets/roads/Models/GLB format/road-side.glb" id="36_voqrx"]
+[ext_resource type="PackedScene" uid="uid://cdlbpnj0plsxn" path="res://assets/roads/Models/GLB format/road-slant-barrier.glb" id="37_3kvkn"]
+[ext_resource type="PackedScene" uid="uid://c2ggwbqmrsahk" path="res://assets/roads/Models/GLB format/road-slant-curve-barrier.glb" id="38_uk4gm"]
+[ext_resource type="PackedScene" uid="uid://1fynsrky4cqq" path="res://assets/roads/Models/GLB format/road-slant-curve.glb" id="39_mrxru"]
+[ext_resource type="PackedScene" uid="uid://byl1b4fsw7krf" path="res://assets/roads/Models/GLB format/road-slant-flat-curve.glb" id="40_tyuxt"]
+[ext_resource type="PackedScene" uid="uid://cxl03lxdw5ocj" path="res://assets/roads/Models/GLB format/road-slant-flat-high.glb" id="41_2lbr8"]
+[ext_resource type="PackedScene" uid="uid://2c5nmis1pq6y" path="res://assets/roads/Models/GLB format/road-slant-flat.glb" id="42_ahv62"]
+[ext_resource type="PackedScene" uid="uid://by5ch0e6r7q75" path="res://assets/roads/Models/GLB format/road-slant-high-barrier.glb" id="43_43dat"]
+[ext_resource type="PackedScene" uid="uid://cw4cdgfhg1psl" path="res://assets/roads/Models/GLB format/road-slant-high.glb" id="44_awei6"]
+[ext_resource type="PackedScene" uid="uid://y5fyd6yd1hqh" path="res://assets/roads/Models/GLB format/road-slant.glb" id="45_q1phu"]
+[ext_resource type="PackedScene" uid="uid://dwfohhtdbxswi" path="res://assets/roads/Models/GLB format/road-split-barrier.glb" id="46_m2yhj"]
+[ext_resource type="PackedScene" uid="uid://bryrldhk7ijxg" path="res://assets/roads/Models/GLB format/road-split.glb" id="47_oyta3"]
+[ext_resource type="PackedScene" uid="uid://c1xl1rraasiug" path="res://assets/roads/Models/GLB format/road-square-barrier.glb" id="48_t2ydw"]
+[ext_resource type="PackedScene" uid="uid://ctwn1idl8wcpq" path="res://assets/roads/Models/GLB format/road-square.glb" id="49_xwolv"]
+[ext_resource type="PackedScene" uid="uid://dunec14rvlgud" path="res://assets/roads/Models/GLB format/road-straight-barrier-end.glb" id="50_by5ib"]
+[ext_resource type="PackedScene" uid="uid://b0ll3iwahp87w" path="res://assets/roads/Models/GLB format/road-straight-barrier-half.glb" id="51_m6p7u"]
+[ext_resource type="PackedScene" uid="uid://vk2s53l4ycme" path="res://assets/roads/Models/GLB format/road-straight-barrier.glb" id="52_bvgiy"]
+[ext_resource type="PackedScene" uid="uid://pe8v4rhalwsx" path="res://assets/roads/Models/GLB format/road-straight-half.glb" id="53_bgfve"]
+[ext_resource type="PackedScene" uid="uid://bbdg6e8kbxnmh" path="res://assets/roads/Models/GLB format/road-straight.glb" id="54_volg6"]
+[ext_resource type="PackedScene" uid="uid://cdw1ct1w8sv3c" path="res://assets/roads/Models/GLB format/light-curved-cross.glb" id="55_o2gwo"]
+[ext_resource type="PackedScene" uid="uid://b1km78rh8fwlh" path="res://assets/roads/Models/GLB format/light-curved-double.glb" id="56_hcilm"]
+[ext_resource type="PackedScene" uid="uid://sao50he764s8" path="res://assets/roads/Models/GLB format/light-curved.glb" id="57_1bdjr"]
+[ext_resource type="PackedScene" uid="uid://qmd3lqod361m" path="res://assets/roads/Models/GLB format/light-square-cross.glb" id="58_vlt3i"]
+[ext_resource type="PackedScene" uid="uid://dvr76c1in764d" path="res://assets/roads/Models/GLB format/light-square-double.glb" id="59_m8eee"]
+[ext_resource type="PackedScene" uid="uid://c5s3ahpx7mthh" path="res://assets/roads/Models/GLB format/light-square.glb" id="60_ixmdw"]
+
+[node name="road_library" type="Node3D" unique_id=1449929436]
+
+[node name="road-bend-barrier2" parent="." unique_id=264601832 instance=ExtResource("1_60lu8")]
+
+[node name="road-bend-sidewalk2" parent="." unique_id=196215213 instance=ExtResource("2_l2udj")]
+
+[node name="road-bend-square-barrier2" parent="." unique_id=1525437474 instance=ExtResource("3_6jvli")]
+
+[node name="road-bend-square2" parent="." unique_id=767553734 instance=ExtResource("4_3h2lm")]
+
+[node name="road-bend2" parent="." unique_id=557548883 instance=ExtResource("5_s5deb")]
+
+[node name="road-bridge2" parent="." unique_id=932939231 instance=ExtResource("6_j7ixs")]
+
+[node name="road-crossing2" parent="." unique_id=1983360132 instance=ExtResource("7_typxt")]
+
+[node name="road-crossroad-barrier2" parent="." unique_id=1586165445 instance=ExtResource("8_n3ev1")]
+
+[node name="road-crossroad-line2" parent="." unique_id=845999656 instance=ExtResource("9_ytsrb")]
+
+[node name="road-crossroad-path2" parent="." unique_id=1575754185 instance=ExtResource("10_m2gnu")]
+
+[node name="road-crossroad2" parent="." unique_id=1428770477 instance=ExtResource("11_8oaas")]
+
+[node name="road-curve-barrier2" parent="." unique_id=2143452804 instance=ExtResource("12_o3350")]
+
+[node name="road-curve-intersection-barrier2" parent="." unique_id=2014937309 instance=ExtResource("13_mf34b")]
+
+[node name="road-curve-intersection2" parent="." unique_id=1499251875 instance=ExtResource("14_827gu")]
+
+[node name="road-curve-pavement2" parent="." unique_id=1799422386 instance=ExtResource("15_yveaw")]
+
+[node name="road-curve2" parent="." unique_id=2068656758 instance=ExtResource("16_gpewy")]
+
+[node name="road-driveway-double-barrier2" parent="." unique_id=1557767524 instance=ExtResource("17_t0gkj")]
+
+[node name="road-driveway-double2" parent="." unique_id=941907954 instance=ExtResource("18_das7c")]
+
+[node name="road-driveway-single-barrier2" parent="." unique_id=694941488 instance=ExtResource("19_q4yay")]
+
+[node name="road-driveway-single2" parent="." unique_id=641596324 instance=ExtResource("20_noqi5")]
+
+[node name="road-end-barrier2" parent="." unique_id=896538977 instance=ExtResource("21_d0p1n")]
+
+[node name="road-end-round-barrier2" parent="." unique_id=255591979 instance=ExtResource("22_kbxyw")]
+
+[node name="road-end-round2" parent="." unique_id=1348892782 instance=ExtResource("23_i7np2")]
+
+[node name="road-end2" parent="." unique_id=1675072788 instance=ExtResource("24_2nqyp")]
+
+[node name="road-intersection-barrier2" parent="." unique_id=2105757413 instance=ExtResource("25_n30k5")]
+
+[node name="road-intersection-line2" parent="." unique_id=1175020460 instance=ExtResource("26_dgx53")]
+
+[node name="road-intersection-path2" parent="." unique_id=667862741 instance=ExtResource("27_6okea")]
+
+[node name="road-intersection2" parent="." unique_id=591645146 instance=ExtResource("28_xl7vu")]
+
+[node name="road-roundabout-barrier2" parent="." unique_id=907920755 instance=ExtResource("29_ierjw")]
+
+[node name="road-roundabout2" parent="." unique_id=801917873 instance=ExtResource("30_8gcho")]
+
+[node name="road-side-barrier2" parent="." unique_id=971665760 instance=ExtResource("31_fn1it")]
+
+[node name="road-side-entry-barrier2" parent="." unique_id=793500680 instance=ExtResource("32_fsur6")]
+
+[node name="road-side-entry2" parent="." unique_id=58275202 instance=ExtResource("33_8dn7d")]
+
+[node name="road-side-exit-barrier2" parent="." unique_id=62429676 instance=ExtResource("34_e0ulo")]
+
+[node name="road-side-exit2" parent="." unique_id=838981843 instance=ExtResource("35_leyuv")]
+
+[node name="road-side2" parent="." unique_id=580146651 instance=ExtResource("36_voqrx")]
+
+[node name="road-slant-barrier2" parent="." unique_id=1974420771 instance=ExtResource("37_3kvkn")]
+
+[node name="road-slant-curve-barrier2" parent="." unique_id=916407825 instance=ExtResource("38_uk4gm")]
+
+[node name="road-slant-curve2" parent="." unique_id=1748247911 instance=ExtResource("39_mrxru")]
+
+[node name="road-slant-flat-curve2" parent="." unique_id=1944046785 instance=ExtResource("40_tyuxt")]
+
+[node name="road-slant-flat-high2" parent="." unique_id=2075317408 instance=ExtResource("41_2lbr8")]
+
+[node name="road-slant-flat2" parent="." unique_id=1766114753 instance=ExtResource("42_ahv62")]
+
+[node name="road-slant-high-barrier2" parent="." unique_id=309906700 instance=ExtResource("43_43dat")]
+
+[node name="road-slant-high2" parent="." unique_id=86750748 instance=ExtResource("44_awei6")]
+
+[node name="road-slant2" parent="." unique_id=588246239 instance=ExtResource("45_q1phu")]
+
+[node name="road-split-barrier2" parent="." unique_id=197723449 instance=ExtResource("46_m2yhj")]
+
+[node name="road-split2" parent="." unique_id=1680705102 instance=ExtResource("47_oyta3")]
+
+[node name="road-square-barrier2" parent="." unique_id=1130897414 instance=ExtResource("48_t2ydw")]
+
+[node name="road-square2" parent="." unique_id=1226570792 instance=ExtResource("49_xwolv")]
+
+[node name="road-straight-barrier-end2" parent="." unique_id=1789125833 instance=ExtResource("50_by5ib")]
+
+[node name="road-straight-barrier-half2" parent="." unique_id=1883383194 instance=ExtResource("51_m6p7u")]
+
+[node name="road-straight-barrier2" parent="." unique_id=1132738111 instance=ExtResource("52_bvgiy")]
+
+[node name="road-straight-half2" parent="." unique_id=972076217 instance=ExtResource("53_bgfve")]
+
+[node name="road-straight2" parent="." unique_id=1321928169 instance=ExtResource("54_volg6")]
+
+[node name="light-curved-cross2" parent="." unique_id=1482404282 instance=ExtResource("55_o2gwo")]
+
+[node name="light-curved-double2" parent="." unique_id=1864379980 instance=ExtResource("56_hcilm")]
+
+[node name="light-curved2" parent="." unique_id=1963540317 instance=ExtResource("57_1bdjr")]
+
+[node name="light-square-cross2" parent="." unique_id=525272971 instance=ExtResource("58_vlt3i")]
+
+[node name="light-square-double2" parent="." unique_id=697288673 instance=ExtResource("59_m8eee")]
+
+[node name="light-square2" parent="." unique_id=436455014 instance=ExtResource("60_ixmdw")]

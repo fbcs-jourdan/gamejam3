@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://dpd8m75gq2fx0"]
+
+[ext_resource type="PackedScene" uid="uid://381f2xd6o5ti" path="res://assets/GLB format/building-a.glb" id="1_8a8r8"]
+[ext_resource type="PackedScene" uid="uid://80wvt4fly1v5" path="res://assets/GLB format/building-b.glb" id="2_yva70"]
+[ext_resource type="PackedScene" uid="uid://b7o5fx54jsdmx" path="res://assets/GLB format/building-c.glb" id="3_y5vv1"]
+[ext_resource type="PackedScene" uid="uid://oopfgjvey000" path="res://assets/GLB format/building-d.glb" id="4_g2nl2"]
+[ext_resource type="PackedScene" uid="uid://bc1kidswli4pf" path="res://assets/GLB format/building-e.glb" id="5_8r0b5"]
+[ext_resource type="PackedScene" uid="uid://bpf38vou5u880" path="res://assets/GLB format/building-f.glb" id="6_80su3"]
+[ext_resource type="PackedScene" uid="uid://b6pu8grjsymqk" path="res://assets/GLB format/building-g.glb" id="7_hbhpk"]
+[ext_resource type="PackedScene" uid="uid://j0v4a31ryivk" path="res://assets/GLB format/building-h.glb" id="8_7tegi"]
+[ext_resource type="PackedScene" uid="uid://nwe5d1scpq7h" path="res://assets/GLB format/building-i.glb" id="9_x2afy"]
+[ext_resource type="PackedScene" uid="uid://dx1w4gtoxrfxq" path="res://assets/GLB format/building-j.glb" id="10_o4arj"]
+[ext_resource type="PackedScene" uid="uid://b177e67qcgunw" path="res://assets/GLB format/building-k.glb" id="11_y2tys"]
+[ext_resource type="PackedScene" uid="uid://dumw6oq4d3xja" path="res://assets/GLB format/building-l.glb" id="12_6ih5l"]
+[ext_resource type="PackedScene" uid="uid://deafwwgc6b1cm" path="res://assets/GLB format/building-m.glb" id="13_6oqgt"]
+[ext_resource type="PackedScene" uid="uid://c6m3i6ey3k5dh" path="res://assets/GLB format/building-n.glb" id="14_wlgci"]
+[ext_resource type="PackedScene" uid="uid://bf8txx38myysk" path="res://assets/GLB format/building-skyscraper-a.glb" id="15_qylr0"]
+[ext_resource type="PackedScene" uid="uid://b3kgsa7hqmtl" path="res://assets/GLB format/building-skyscraper-b.glb" id="16_84tbt"]
+[ext_resource type="PackedScene" uid="uid://cpqjuw5xm4adk" path="res://assets/GLB format/building-skyscraper-c.glb" id="17_dwdxy"]
+[ext_resource type="PackedScene" uid="uid://buxva7xm3mi0b" path="res://assets/GLB format/building-skyscraper-d.glb" id="18_y8pi8"]
+[ext_resource type="PackedScene" uid="uid://doqof6asphgqb" path="res://assets/GLB format/building-skyscraper-e.glb" id="19_ijd31"]
+
+[node name="BuildingLibrary" type="Node3D" unique_id=442919629]
+
+[node name="building-a2" parent="." unique_id=945821634 instance=ExtResource("1_8a8r8")]
+
+[node name="building-b2" parent="." unique_id=13269813 instance=ExtResource("2_yva70")]
+
+[node name="building-c2" parent="." unique_id=575372704 instance=ExtResource("3_y5vv1")]
+
+[node name="building-d2" parent="." unique_id=216570139 instance=ExtResource("4_g2nl2")]
+
+[node name="building-e2" parent="." unique_id=2021420690 instance=ExtResource("5_8r0b5")]
+
+[node name="building-f2" parent="." unique_id=2089310382 instance=ExtResource("6_80su3")]
+
+[node name="building-g2" parent="." unique_id=1149967110 instance=ExtResource("7_hbhpk")]
+
+[node name="building-h2" parent="." unique_id=751751315 instance=ExtResource("8_7tegi")]
+
+[node name="building-i2" parent="." unique_id=124045371 instance=ExtResource("9_x2afy")]
+
+[node name="building-j2" parent="." unique_id=1381964024 instance=ExtResource("10_o4arj")]
+
+[node name="building-k2" parent="." unique_id=26172725 instance=ExtResource("11_y2tys")]
+
+[node name="building-l2" parent="." unique_id=1827735766 instance=ExtResource("12_6ih5l")]
+
+[node name="building-m2" parent="." unique_id=1140256115 instance=ExtResource("13_6oqgt")]
+
+[node name="building-n2" parent="." unique_id=1016619693 instance=ExtResource("14_wlgci")]
+
+[node name="building-skyscraper-a2" parent="." unique_id=1658656432 instance=ExtResource("15_qylr0")]
+
+[node name="building-skyscraper-b2" parent="." unique_id=1844751039 instance=ExtResource("16_84tbt")]
+
+[node name="building-skyscraper-c2" parent="." unique_id=276516405 instance=ExtResource("17_dwdxy")]
+
+[node name="building-skyscraper-d2" parent="." unique_id=1436029585 instance=ExtResource("18_y8pi8")]
+
+[node name="building-skyscraper-e2" parent="." unique_id=794352475 instance=ExtResource("19_ijd31")]

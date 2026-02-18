@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://b1777xc46nyo3"]
+
+[ext_resource type="PackedScene" uid="uid://bwmuxsf1i0otx" path="res://scenes/car.tscn" id="2_tlwt5"]
+[ext_resource type="Script" uid="uid://dcqit30bb4226" path="res://scripts/cameras.gd" id="3_aqk2v"]
+[ext_resource type="MeshLibrary" uid="uid://bfp4x28hp72rb" path="res://meshlibrary/building_lib.meshlib" id="3_tlwt5"]
+[ext_resource type="MeshLibrary" uid="uid://iu4y23lmdaig" path="res://meshlibrary/road_lib.meshlib" id="4_k0juu"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_a0tk4"]
+sky_top_color = Color(0.40029314, 0.41218975, 0.39441738, 1)
+sky_horizon_color = Color(1.0348678, 1.0221086, 1.0038987, 1)
+ground_bottom_color = Color(0.59, 0.52706665, 0.47199997, 1)
+ground_horizon_color = Color(1.0348678, 1.0221086, 1.0038987, 1)
+
+[sub_resource type="Sky" id="Sky_r3fl7"]
+sky_material = SubResource("ProceduralSkyMaterial_a0tk4")
+
+[sub_resource type="Environment" id="Environment_jka67"]
+background_mode = 2
+background_color = Color(0.07123137, 0.07123139, 0.07123137, 1)
+sky = SubResource("Sky_r3fl7")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_noarx"]
+
+[node name="World" type="Node3D" unique_id=592978772]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1591141493]
+environment = SubResource("Environment_jka67")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2007929400]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+light_color = Color(0, 0, 0, 1)
+shadow_enabled = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=599300601]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1744.1045, -0.5, -224.0874)
+use_collision = true
+size = Vector3(10000, 1, 10000)
+material = SubResource("StandardMaterial3D_noarx")
+
+[node name="Car" parent="." unique_id=161624053 instance=ExtResource("2_tlwt5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.48742574, 1.7106624, -3.8679411)
+
+[node name="Cameras" type="Node3D" parent="Car" unique_id=685899208 node_paths=PackedStringArray("cameras")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.51984537, 0)
+script = ExtResource("3_aqk2v")
+cameras = [NodePath("WideView"), NodePath("CloseView"), NodePath("HoodView"), NodePath("BumperView")]
+
+[node name="WideView" type="Camera3D" parent="Car/Cameras" unique_id=1046534140]
+transform = Transform3D(1, 0, 0, 0, 0.97251236, 0.23285133, 0, -0.23285133, 0.97251236, 0, 3.8619652, 6.784943)
+fov = 90.9
+
+[node name="CloseView" type="Camera3D" parent="Car/Cameras" unique_id=751879672]
+transform = Transform3D(1, 0, 0, 0, 0.9588842, 0.28379777, 0, -0.28379777, 0.9588842, 0, 2.8142834, 5.3782663)
+
+[node name="HoodView" type="Camera3D" parent="Car/Cameras" unique_id=165583961]
+transform = Transform3D(1, 0, 0, 0, 0.9895837, 0.14395897, 0, -0.14395897, 0.9895837, 0, 2.5436707, -0.635236)
+fov = 90.0
+
+[node name="BumperView" type="Camera3D" parent="Car/Cameras" unique_id=2087973268]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7051022, -2.540368)
+
+[node name="BuildingTiles" type="GridMap" parent="." unique_id=1470632284]
+transform = Transform3D(13, 0, 0, 0, 13, 0, 0, 0, 13, 0, -13, 0)
+mesh_library = ExtResource("3_tlwt5")
+cell_size = Vector3(0.25, 2, 0.25)
+data = {
+"cells": PackedInt32Array(65529, 65520, 1441805, 65529, 65530, 1441801, 65529, 65512, 1441808, 3, 65531, 1048581, 3, 65525, 1048580, 3, 65517, 1048586, 4, 65509, 1048590, 4, 65503, 1048591, 65529, 65504, 1441801, 65521, 65502, 13, 65514, 65501, 6, 65528, 65491, 655369, 65519, 65492, 655364, 65512, 65491, 655374, 10, 65502, 655374, 16, 65502, 655368, 65530, 65485, 1048584, 65530, 65479, 1441804, 65529, 65471, 1441805, 3, 65490, 1441796, 3, 65481, 1441802, 4, 65473, 1048584, 8, 65492, 655378, 14, 65492, 655376)
+}
+
+[node name="RoadTiles" type="GridMap" parent="." unique_id=476181589]
+transform = Transform3D(13, 0, 0, 0, 13, 0, 0, 0, 13, 0, -13, 0)
+mesh_library = ExtResource("4_k0juu")
+cell_size = Vector3(0.5, 2, 0.5)
+data = {
+"cells": PackedInt32Array(65535, 65535, 1441845, 65535, 1, 1441845, 65535, 65533, 1441845, 65535, 65531, 1441845, 65535, 65529, 1441845, 65535, 65527, 1441845, 65535, 65525, 1441845, 65535, 3, 1441845, 65535, 5, 1441845, 65535, 7, 1441845, 65535, 9, 1441845, 65535, 65523, 1441845, 65535, 65521, 1441845, 65535, 65519, 1441845, 65535, 65518, 1441845, 65535, 65516, 1441801, 65533, 65516, 655413, 65531, 65516, 655413, 65529, 65516, 655413, 1, 65516, 655413, 3, 65516, 655413, 5, 65516, 655413, 7, 65516, 655413, 65527, 65516, 655413, 65525, 65516, 655413, 65523, 65516, 655413, 65535, 65514, 1048629, 65535, 65512, 1048629, 65535, 65510, 1048629, 65535, 65508, 1048629, 65535, 65506, 1048629, 65535, 65504, 1048629, 65535, 65502, 1048629)
+}
