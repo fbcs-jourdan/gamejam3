@@ -9,6 +9,21 @@ _data = [Vector2(0, 0.3), 0.0, 0.0, 0, 0, Vector2(0.3, 0.90000004), 0.0, 0.0, 0,
 point_count = 4
 metadata/_snap_enabled = true
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_50v30"]
+sky_top_color = Color(0.40029314, 0.41218975, 0.39441738, 1)
+sky_horizon_color = Color(1.0348678, 1.0221086, 1.0038987, 1)
+ground_bottom_color = Color(0.59, 0.52706665, 0.47199997, 1)
+ground_horizon_color = Color(1.0348678, 1.0221086, 1.0038987, 1)
+
+[sub_resource type="Sky" id="Sky_jtldb"]
+sky_material = SubResource("ProceduralSkyMaterial_50v30")
+
+[sub_resource type="Environment" id="Environment_3mrxu"]
+background_mode = 1
+sky = SubResource("Sky_jtldb")
+tonemap_mode = 2
+glow_enabled = true
+
 [sub_resource type="BoxMesh" id="BoxMesh_r3fl7"]
 size = Vector3(2, 0.5, 4)
 
@@ -64,6 +79,14 @@ wheels = [NodePath("WheelFL"), NodePath("WheelRL"), NodePath("WheelFR"), NodePat
 acceleration = 800.0
 accel_curve = SubResource("Curve_a0tk4")
 skid_marks = [NodePath("SkidMarks/GPUParticles3D"), NodePath("SkidMarks/GPUParticles3D2"), NodePath("SkidMarks/GPUParticles3D3"), NodePath("SkidMarks/GPUParticles3D4")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=633266991]
+environment = SubResource("Environment_3mrxu")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=742541146]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+light_color = Color(0, 0, 0, 1)
+shadow_enabled = true
 
 [node name="CarMesh" type="MeshInstance3D" parent="." unique_id=1455150668]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
@@ -182,3 +205,19 @@ draw_pass_1 = SubResource("QuadMesh_wc5p8")
 
 [node name="sedan-sports2" parent="." unique_id=1573167100 instance=ExtResource("3_k61xc")]
 transform = Transform3D(-1.985, 0, -1.7353422e-07, 0, 1.985, 0, 1.7353422e-07, 0, -1.985, 0, 0, 0)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=891023083]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.96844685, 0.71530867, -2.409646)
+light_color = Color(0.9999997, 0.92177033, 0.765579, 1)
+light_energy = 30.0
+spot_range = 30.0
+spot_angle = 15.0
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=99607757]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0255778, 0.71530867, -2.4229703)
+light_color = Color(0.9999997, 0.92177033, 0.765579, 1)
+light_energy = 30.0
+shadow_enabled = true
+distance_fade_enabled = true
+spot_range = 30.0
+spot_angle = 15.0
