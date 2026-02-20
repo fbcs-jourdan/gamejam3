@@ -15,7 +15,6 @@
 [ext_resource type="PackedScene" uid="uid://dlb7h0ymso6e" path="res://assets/roads/Models/GLB format/road-curve-intersection-barrier.glb" id="13_mf34b"]
 [ext_resource type="PackedScene" uid="uid://dvh48n5oo5ls1" path="res://assets/roads/Models/GLB format/road-curve-intersection.glb" id="14_827gu"]
 [ext_resource type="PackedScene" uid="uid://0a64vx8168h8" path="res://assets/roads/Models/GLB format/road-curve-pavement.glb" id="15_yveaw"]
-[ext_resource type="PackedScene" uid="uid://yr4t3dnqfhwc" path="res://assets/roads/Models/GLB format/road-curve.glb" id="16_gpewy"]
 [ext_resource type="PackedScene" uid="uid://dklu86g47bpgp" path="res://assets/roads/Models/GLB format/road-driveway-double-barrier.glb" id="17_t0gkj"]
 [ext_resource type="PackedScene" uid="uid://dk83mqk5467qa" path="res://assets/roads/Models/GLB format/road-driveway-double.glb" id="18_das7c"]
 [ext_resource type="PackedScene" uid="uid://dfvm3firbwms7" path="res://assets/roads/Models/GLB format/road-driveway-single-barrier.glb" id="19_q4yay"]
@@ -60,6 +59,7 @@
 [ext_resource type="PackedScene" uid="uid://qmd3lqod361m" path="res://assets/roads/Models/GLB format/light-square-cross.glb" id="58_vlt3i"]
 [ext_resource type="PackedScene" uid="uid://dvr76c1in764d" path="res://assets/roads/Models/GLB format/light-square-double.glb" id="59_m8eee"]
 [ext_resource type="PackedScene" uid="uid://c5s3ahpx7mthh" path="res://assets/roads/Models/GLB format/light-square.glb" id="60_ixmdw"]
+[ext_resource type="PackedScene" uid="uid://bl4uge37a8co5" path="res://light_curved_2.tscn" id="61_l2udj"]
 
 [node name="road_library" type="Node3D" unique_id=1449929436]
 
@@ -92,8 +92,6 @@
 [node name="road-curve-intersection2" parent="." unique_id=1499251875 instance=ExtResource("14_827gu")]
 
 [node name="road-curve-pavement2" parent="." unique_id=1799422386 instance=ExtResource("15_yveaw")]
-
-[node name="road-curve2" parent="." unique_id=2068656758 instance=ExtResource("16_gpewy")]
 
 [node name="road-driveway-double-barrier2" parent="." unique_id=1557767524 instance=ExtResource("17_t0gkj")]
 
@@ -175,10 +173,13 @@
 
 [node name="light-curved-double2" parent="." unique_id=1864379980 instance=ExtResource("56_hcilm")]
 
-[node name="light-curved2" parent="." unique_id=1963540317 instance=ExtResource("57_1bdjr")]
+[node name="light-curved2" parent="." unique_id=626689113 instance=ExtResource("57_1bdjr")]
 
 [node name="light-square-cross2" parent="." unique_id=525272971 instance=ExtResource("58_vlt3i")]
 
 [node name="light-square-double2" parent="." unique_id=697288673 instance=ExtResource("59_m8eee")]
 
 [node name="light-square2" parent="." unique_id=436455014 instance=ExtResource("60_ixmdw")]
+
+[node name="light-curved3" parent="." unique_id=241889653 instance=ExtResource("61_l2udj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1954463, 0, 0.30057776)

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bl4uge37a8co5"]
+
+[ext_resource type="PackedScene" uid="uid://sao50he764s8" path="res://assets/roads/Models/GLB format/light-curved.glb" id="1_nviql"]
+
+[node name="light-curved2" unique_id=626689113 instance=ExtResource("1_nviql")]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="light-curved" parent_id_path=PackedInt32Array(1238480370) index="1" unique_id=504959582]
+transform = Transform3D(1, 0, 0, 0, 0.21372944, 0.9768929, 0, -0.9768929, 0.21372944, 0, 0.64873147, -0.16260126)
+light_energy = 4.725
+shadow_enabled = true
+spot_range = 1.619

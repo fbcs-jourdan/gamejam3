@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://ch6rbo0mjoep8"]
+
+[ext_resource type="Script" uid="uid://uot2s0r0xumd" path="res://speedometer.gd" id="1_3xc74"]
+
+[node name="Speedometer" type="Control" unique_id=930977118]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3xc74")
+
+[node name="Label" type="Label" parent="." unique_id=1076368261]
+layout_mode = 0
+offset_right = 790.0
+offset_bottom = 277.0
