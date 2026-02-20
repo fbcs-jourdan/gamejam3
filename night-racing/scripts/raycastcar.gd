@@ -48,6 +48,11 @@ func _basic_steering_rotation(delta: float) -> void:
 		$WheelFR.rotation.y = move_toward($WheelFR.rotation.y, 0, tire_turn_speed * delta)
 	
 func _physics_process(delta: float) -> void:
+	var speed = abs(linear_velocity.x) + abs(linear_velocity.z)
+	if not hand_brake:
+		SPEED.velocity = speed
+	else:
+		SPEED.velocity = speed - abs(linear_velocity.x) - abs(linear_velocity.z)
 	_basic_steering_rotation(delta)
 	var id := 0
 	for wheel in wheels:
@@ -60,6 +65,7 @@ func _physics_process(delta: float) -> void:
 	#print(Cam.accel_zoom)
 		
 func _get_point_velocity(point: Vector3) -> Vector3:
+
 	return linear_velocity + angular_velocity.cross(point - global_position)
 	
 func _do_single_wheel_traction(ray: RaycastWheel, idx: int) -> void:

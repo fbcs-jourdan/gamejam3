@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://uot2s0r0xumd" path="res://speedometer.gd" id="1_3xc74"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_3xc74"]
+font_size = 73
+
 [node name="Speedometer" type="Control" unique_id=930977118]
 layout_mode = 3
 anchors_preset = 15
@@ -15,3 +18,4 @@ script = ExtResource("1_3xc74")
 layout_mode = 0
 offset_right = 790.0
 offset_bottom = 277.0
+label_settings = SubResource("LabelSettings_3xc74")

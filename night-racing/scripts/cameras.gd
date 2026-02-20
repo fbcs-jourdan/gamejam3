@@ -22,9 +22,8 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("cam"):
 		index = (index + 1) % cameras.size()
 		change_cam()
-		
-		
 		print("cam working")
+	#SPEED.velocity = (cameras[0].fov / 90) * 50
 		
 func change_cam() -> void:
 	for i in range(cameras.size()):
