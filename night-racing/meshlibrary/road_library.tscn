@@ -181,5 +181,4 @@
 
 [node name="light-square2" parent="." unique_id=436455014 instance=ExtResource("60_ixmdw")]
 
-[node name="light-curved3" parent="." unique_id=241889653 instance=ExtResource("61_l2udj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1954463, 0, 0.30057776)
+[node name="light-curved4" parent="." unique_id=2142349141 instance=ExtResource("61_l2udj")]
