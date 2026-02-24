@@ -22,7 +22,7 @@ func _ready() -> void:
 			new_light.rotation.y = 0
 		elif orientation == 22:
 			new_light.rotation.y = -90
-		elif orientation == 24:
+		elif orientation == 19:
 			new_light.rotation.y = -90
 		else:
 			print('open road_tiles.gd and add orientation: ' +str(orientation))
