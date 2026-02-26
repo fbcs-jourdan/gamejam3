@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b632ucq7ey23j"]
 
 [ext_resource type="PackedScene" uid="uid://htwur6o3tgu1" path="res://assets/roads/Models/GLB format/road-bend-barrier.glb" id="1_60lu8"]
+[ext_resource type="PackedScene" uid="uid://b6tfrbawg84dq" path="res://assets/roads/Models/FBX format/road-crossroad-path.fbx" id="1_l2udj"]
 [ext_resource type="PackedScene" uid="uid://dkbxtn71l0cs3" path="res://assets/roads/Models/GLB format/road-bend-sidewalk.glb" id="2_l2udj"]
 [ext_resource type="PackedScene" uid="uid://cvs0mg5aa16ms" path="res://assets/roads/Models/GLB format/road-bend-square-barrier.glb" id="3_6jvli"]
 [ext_resource type="PackedScene" uid="uid://dbgvcpcqhtamj" path="res://assets/roads/Models/GLB format/road-bend-square.glb" id="4_3h2lm"]
@@ -62,6 +63,8 @@
 [ext_resource type="PackedScene" uid="uid://bl4uge37a8co5" path="res://light_curved_2.tscn" id="61_l2udj"]
 
 [node name="road_library" type="Node3D" unique_id=1449929436]
+
+[node name="road-crossroad-path" parent="." unique_id=857505358 instance=ExtResource("1_l2udj")]
 
 [node name="road-bend-barrier2" parent="." unique_id=264601832 instance=ExtResource("1_60lu8")]
 

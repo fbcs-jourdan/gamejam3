@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d1v5jgwc0bm4p"
+path="res://.godot/imported/Rust Fishing Village Music in good quality.mp3-dd371f38adf9a64268196198b43cd067.mp3str"
+
+[deps]
+
+source_file="res://assets/Rust Fishing Village Music in good quality.mp3"
+dest_files=["res://.godot/imported/Rust Fishing Village Music in good quality.mp3-dd371f38adf9a64268196198b43cd067.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

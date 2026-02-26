@@ -53,6 +53,7 @@ func _physics_process(delta: float) -> void:
 		SPEED.velocity = speed
 	else:
 		SPEED.velocity = speed - abs(linear_velocity.x) - abs(linear_velocity.z)
+		
 	_basic_steering_rotation(delta)
 	var id := 0
 	for wheel in wheels:
