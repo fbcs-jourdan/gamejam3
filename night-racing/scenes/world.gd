@@ -40,8 +40,8 @@ func _process(delta: float) -> void:
 		engine.pitch_scale -= .05
 	
 	
-	print(health)
-	if health <= 0:
+	#print(health)
+	if point.health <= 0:
 		get_tree().quit()
 	pass
 	
@@ -52,8 +52,9 @@ func _on_delivery_zone_body_entered(body: Node3D) -> void:
 
 func _on_car_body_entered(body: Node) -> void:
 	audio_stream_player.play_sfx("crash_sound")
-	health -= 10
+	#health -= 10
 	point.score = 0
+	point.health -= 10
 
 func _on_timer_timeout() -> void:
 	music_start = true

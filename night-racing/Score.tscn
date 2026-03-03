@@ -11,8 +11,15 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7urb4")
 
-[node name="Label" type="Label" parent="." unique_id=1238390052]
+[node name="points" type="Label" parent="." unique_id=1238390052]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "Score:"
+
+[node name="health" type="Label" parent="." unique_id=1024307906]
+layout_mode = 0
+offset_top = 44.0
+offset_right = 40.0
+offset_bottom = 67.0
+text = "Health:"

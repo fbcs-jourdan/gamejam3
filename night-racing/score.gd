@@ -1,6 +1,7 @@
 extends Control
 
-@onready var label: Label = $Label
+@onready var points: Label = $points
+@onready var health: Label = $health
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -9,4 +10,6 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	label.text = str(point.score)
+	points.text = "Score: " + str(point.score)
+	health.text = "Health: " + str(point.health)
+	
