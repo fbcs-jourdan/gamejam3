@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://lrxs7tpamn77"]
+
+[ext_resource type="Script" uid="uid://b88bmf2ig02r4" path="res://score.gd" id="1_7urb4"]
+
+[node name="Control" type="Control" unique_id=886718555]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7urb4")
+
+[node name="Label" type="Label" parent="." unique_id=1238390052]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Score:"

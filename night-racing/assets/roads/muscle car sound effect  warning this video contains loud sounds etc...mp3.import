@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cmrfk4edsat87"
+path="res://.godot/imported/muscle car sound effect  warning this video contains loud sounds etc...mp3-cc37916c0697632919a6c0fad9b87053.mp3str"
+
+[deps]
+
+source_file="res://assets/roads/muscle car sound effect  warning this video contains loud sounds etc...mp3"
+dest_files=["res://.godot/imported/muscle car sound effect  warning this video contains loud sounds etc...mp3-cc37916c0697632919a6c0fad9b87053.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

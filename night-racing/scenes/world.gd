@@ -8,10 +8,12 @@ var health = 100
 @onready var timer: Timer = $Timer
 
 var music_start = false
+@onready var engine: AudioStreamPlayer = $engine
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	#audio_stream_player.play_sfx("idle_sound")
+	engine.play()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -29,6 +31,13 @@ func _process(delta: float) -> void:
 		timer.start()
 		if music_start:
 			audio_stream_player.play_sfx("radio_music")
+			
+	if Input.is_action_pressed("accelerate"):
+		if engine.pitch_scale <= 3:
+			engine.pitch_scale += .05
+		
+	elif engine.pitch_scale >= 1:
+		engine.pitch_scale -= .05
 	
 	
 	print(health)
@@ -42,7 +51,9 @@ func _on_delivery_zone_body_entered(body: Node3D) -> void:
 	get_tree().reload_current_scene()
 
 func _on_car_body_entered(body: Node) -> void:
+	audio_stream_player.play_sfx("crash_sound")
 	health -= 10
+	point.score = 0
 
 func _on_timer_timeout() -> void:
 	music_start = true
