@@ -2,6 +2,9 @@ extends Node
 
 var score := 0
 var health := 100
+var easy = false
+var medium = false
+var hard = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

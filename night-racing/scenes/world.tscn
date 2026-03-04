@@ -112,6 +112,7 @@ script = ExtResource("5_qfnet")
 [node name="Control" parent="." unique_id=886718555 instance=ExtResource("2_e3hyu")]
 
 [node name="Speedometer" parent="." unique_id=930977118 instance=ExtResource("5_71j4m")]
+visible = false
 offset_left = 457.0
 offset_right = -483.0
 
@@ -139,7 +140,7 @@ script = ExtResource("11_q5onr")
 [node name="Timer" type="Timer" parent="." unique_id=601918856]
 wait_time = 0.2
 
-[node name="GameTimer" type="Timer" parent="." unique_id=1045170035]
+[node name="EasyTimer" type="Timer" parent="." unique_id=1045170035]
 wait_time = 30.0
 autostart = true
 script = ExtResource("12_q5onr")
@@ -151,7 +152,13 @@ offset_bottom = 23.0
 text = "Time Left: "
 script = ExtResource("13_jhx03")
 
+[node name="MediumTimer" type="Timer" parent="." unique_id=99444265]
+wait_time = 15.0
+
+[node name="HardTimer" type="Timer" parent="." unique_id=1228910603]
+wait_time = 10.0
+
 [connection signal="body_entered" from="Car" to="." method="_on_car_body_entered"]
 [connection signal="body_entered" from="DeliveryZone" to="." method="_on_delivery_zone_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]
+[connection signal="timeout" from="EasyTimer" to="." method="_on_game_timer_timeout"]
