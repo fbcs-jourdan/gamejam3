@@ -11,6 +11,8 @@
 [ext_resource type="Script" uid="uid://crhum0yf0n7u2" path="res://scenes/audio_stream_player.gd" id="9_7r4gi"]
 [ext_resource type="AudioStream" uid="uid://dxck0om0l4cti" path="res://assets/engine.mp3" id="10_e3hyu"]
 [ext_resource type="Script" uid="uid://cpwky6xrxpv7o" path="res://scenes/engine.gd" id="11_q5onr"]
+[ext_resource type="Script" uid="uid://n6eave81ldfe" path="res://scenes/game_timer.gd" id="12_q5onr"]
+[ext_resource type="Script" uid="uid://c7hw8j8hwx43h" path="res://scenes/label.gd" id="13_jhx03"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_a0tk4"]
 sky_top_color = Color(0.40029314, 0.41218975, 0.39441738, 1)
@@ -137,6 +139,19 @@ script = ExtResource("11_q5onr")
 [node name="Timer" type="Timer" parent="." unique_id=601918856]
 wait_time = 0.2
 
+[node name="GameTimer" type="Timer" parent="." unique_id=1045170035]
+wait_time = 30.0
+autostart = true
+script = ExtResource("12_q5onr")
+
+[node name="Label" type="Label" parent="." unique_id=1589488166]
+offset_left = 505.0
+offset_right = 586.0
+offset_bottom = 23.0
+text = "Time Left: "
+script = ExtResource("13_jhx03")
+
 [connection signal="body_entered" from="Car" to="." method="_on_car_body_entered"]
 [connection signal="body_entered" from="DeliveryZone" to="." method="_on_delivery_zone_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]

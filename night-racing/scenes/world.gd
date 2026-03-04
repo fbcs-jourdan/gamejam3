@@ -9,6 +9,10 @@ var health = 100
 
 var music_start = false
 @onready var engine: AudioStreamPlayer = $engine
+@onready var game_timer: Timer = $GameTimer
+
+var time = 30
+var quota := 2000
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -18,12 +22,9 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	#arrow.rotation.y = arrow.global_position.angle_to(delivery_zone.global_position) + PI
-	##arrow.look_at_from_position(arrow.global_position, delivery_zone.global_position)
-	#print(delivery_zone.global_position)
-	#print(car.global_position)
-	
-	
+	if point.score > quota:
+		get_tree().change_scene_to_file("res://win_screen.tscn")
+		print(game_timer.time_left)
 	if Input.is_action_just_pressed("handbrake"):
 		audio_stream_player.play_sfx("drift")
 	if Input.is_action_just_pressed("radio"):
@@ -42,7 +43,7 @@ func _process(delta: float) -> void:
 	
 	#print(health)
 	if point.health <= 0:
-		get_tree().quit()
+		get_tree().change_scene_to_file("res://lose_screen.tscn")
 	pass
 	
 
@@ -58,3 +59,9 @@ func _on_car_body_entered(body: Node) -> void:
 
 func _on_timer_timeout() -> void:
 	music_start = true
+
+
+func _on_game_timer_timeout() -> void:
+	if point.score < quota:
+		get_tree().change_scene_to_file("res://lose_screen.tscn")
+		print("lose")
